@@ -1,0 +1,96 @@
+button {
+    font-family: "default";
+    font-size: 1rem;
+}
+
+.char {
+    cursor: default;
+    transition:
+        1s font-weight,
+        1s margin;
+    font-weight: 400;
+}
+
+.char:hover {
+    margin: 2px;
+    transition: 0.1s;
+    font-weight: 700;
+}
+
+#heroContainer {
+    position: absolute;
+    left: 0;
+    top: 80vh;
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 20vh;
+    animation: fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+    background: white;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        font-weight: 200;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#hero {
+    text-align: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+
+    pre {
+        color: var(--prim-color2);
+        opacity: 0.75;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-weight: inherit;
+        margin-bottom: -0.4rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+        font-family: "default";
+        font-weight: inherit;
+        font-size: 1.25rem;
+    }
+
+    #goals {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 2rem;
+        gap: 16px;
+        span {
+            background-color: white;
+            border-radius: 12px;
+            border: solid 0.5px rgba(0, 0, 0, 0.15);
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 16px;
+            padding: 0 32px;
+            border-radius: 15px;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes appear-text {
+    from {
+        font-weight: 200;
+        opacity: 0;
+    }
+}
