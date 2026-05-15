@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+// import ProgBlur from "./components/ProgBlur";
 
 function App(): ReactElement {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -26,7 +27,7 @@ function App(): ReactElement {
       <div ref={heroRef}>
         <Hero />
       </div>
-      {/*<ProgBlur></ProgBlur>*/}
+      {/*<ProgBlur />*/}
     </>
   );
 }
