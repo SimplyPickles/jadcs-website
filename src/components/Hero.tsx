@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <div id="heroContainer">
       <div id="hero">
         <h2 style={{ textAlign: "center" }}> Our Mission </h2>
-        <p style={{ textAlign: "justify", width: "90%", marginLeft: "5%", fontSize: "1.5rem" }}>
+        <p style={{ textAlign: "left", width: "90%", marginLeft: "5%", fontSize: "1.5rem" }}>
           <strong>JADCS</strong> exists to close the opportunity gap in STEM education by equipping
           curious, STEM-driven young minds with the knowledge, tools, and technology they need to
           thrive.

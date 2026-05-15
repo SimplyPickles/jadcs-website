@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-left">
+      {/*<nav className="navbar navbar-left">
         <button>
           <img src={star} /> Events
         </button>
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         <button>
           <img src={contact} /> Contact Us
         </button>
-      </nav>
+      </nav>*/}
 
       <nav className="navbar navbar-right">
         <button onClick={redirect}>
