@@ -3,17 +3,25 @@ button {
     font-size: 1rem;
 }
 
+a {
+    transition: 0.15s;
+}
+
 .pageSections {
     position: absolute;
     left: 0;
     top: 80vh;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     padding-bottom: 6rem;
     animation: fade-in linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 40%;
-    background: linear-gradient(0deg, var(--prim-color3), #ffece6, white 35%);
+    background-image: var(--grain-texture), linear-gradient(0deg, var(--prim-color3), #ffece6, white 35%);
+    background-size:
+        140px 140px,
+        cover;
+    background-blend-mode: soft-light, normal;
     border-top: dashed 2px rgba(0, 0, 0, 0.25);
     overflow-x: hidden;
 }
@@ -21,7 +29,7 @@ button {
 .siteSection {
     width: min(1000px, 86vw);
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -51,6 +59,34 @@ button {
     border-left: 2px var(--prim-color) solid;
     padding-left: 1rem;
     line-height: 2rem;
+}
+
+@media (max-width: 800px) {
+    .pageSections {
+        top: 72vh;
+        padding-bottom: 4rem;
+    }
+
+    .siteSection {
+        width: min(92vw, 680px);
+        min-height: auto;
+        padding-block: 4rem;
+    }
+
+    .siteSection h2 {
+        font-size: clamp(2rem, 11vw, 3.2rem);
+    }
+
+    .sectionIntro {
+        font-size: 1.05rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageSections {
+        top: 68vh;
+    }
 }
 
 @keyframes fade-in {

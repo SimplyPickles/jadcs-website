@@ -58,6 +58,58 @@
     text-decoration-color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 700px) {
+    .navbar {
+        height: auto;
+        min-height: 40px;
+    }
+
+    .navbar-left {
+        left: 8px;
+        right: 8px;
+        width: auto;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .navbar-right {
+        top: 56px;
+        left: 8px;
+        right: 8px;
+        width: auto;
+    }
+
+    .navbar button {
+        flex: 1 1 0;
+        height: 40px;
+        min-width: 0;
+        padding: 8px 10px;
+        gap: 7px;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    .navbar button img {
+        width: 0.95rem;
+    }
+
+    .navbar-right button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .navbar button {
+        padding-inline: 8px;
+        font-size: 13px;
+    }
+
+    .navbar button img {
+        width: 0.85rem;
+    }
+}
+
 @keyframes appear {
     from {
         opacity: 0;
