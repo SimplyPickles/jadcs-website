@@ -20,27 +20,6 @@
     --sec-color: green;
 
     text-align: center;
-    scroll-behavior: smooth;
-    scrollbar-color: var(--prim-color2) rgba(255, 255, 255, 0.55);
-    scrollbar-width: thin;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.55);
-}
-
-::-webkit-scrollbar-thumb {
-    border: solid 3px rgba(255, 255, 255, 0.55);
-    border-radius: 999px;
-    background: linear-gradient(180deg, var(--prim-color2), var(--prim-color));
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, var(--prim-color), var(--prim-color2));
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -67,6 +46,11 @@ body,
 #root {
     min-width: 0;
     overflow-x: clip;
+}
+
+#root > :not(.backgroundContainer) {
+    position: relative;
+    z-index: 1;
 }
 
 html,
@@ -96,15 +80,6 @@ h4,
 h5,
 h6 {
     font-family: "serif";
-}
-
-@keyframes parallax-scroll {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 20px;
-    }
 }
 
 :where(a, button):focus-visible {
