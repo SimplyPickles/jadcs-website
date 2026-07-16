@@ -22,10 +22,8 @@ function App(): ReactElement {
     );
 
     elements.forEach((element, index) => {
-      if (!element.classList.contains("contactFooterRule")) {
-        element.classList.add("scrollReveal");
-        element.style.setProperty("--reveal-delay", `${(index % 3) * 90}ms`);
-      }
+      element.classList.add("scrollReveal");
+      element.style.setProperty("--reveal-delay", `${(index % 3) * 90}ms`);
     });
 
     const observer = new IntersectionObserver(
@@ -56,8 +54,8 @@ function App(): ReactElement {
   return (
     <>
       <title>JADCS | Expanding Access to STEM Education</title>
-      <Background />
       <ProgressiveBlur></ProgressiveBlur>
+      <Background />
       <Navbar />
       <WelcomeSection />
       <div className="heroCtas" aria-label="Primary actions">
